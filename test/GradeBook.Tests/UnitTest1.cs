@@ -11,6 +11,7 @@ namespace GradeBook.Tests
             //arrange
             var x = 5;
             var y = 1;
+            var actual = x + y;
             var expected = 6;
             //act
             var sum = x + y;
