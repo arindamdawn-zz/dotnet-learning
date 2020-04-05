@@ -10,9 +10,14 @@ namespace GradeBook.Tests
         {
             //arrange
             var book = new Book("");
+            book.AddGrade(25.34);
+            book.AddGrade(23.3);
+            var result = book.GetStatistics();
             //act
             //assert
-            Assert.Equal(book, book);
+            Assert.Equal(23.3, result.Low);
+            Assert.Equal(25.34, result.High);
+            Assert.Equal(24.32, result.Average);
         }
     }
 }
