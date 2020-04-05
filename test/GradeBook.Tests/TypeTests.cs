@@ -11,7 +11,7 @@ namespace GradeBook.Tests
             var book1 = GetBook("Book 1");
             GetBookSetName(ref book1, "New Name");
 
-            Assert.Equal(book1.Name, "New Name");
+            Assert.Equal("New Name", book1.Name);
 
         }
 
@@ -25,7 +25,7 @@ namespace GradeBook.Tests
             var book1 = GetBook("Book 1");
             GetBookSetName(book1, "New Name");
 
-            Assert.Equal(book1.Name, "Book 1");
+            Assert.Equal("Book 1", book1.Name);
 
         }
 
@@ -40,7 +40,7 @@ namespace GradeBook.Tests
             var book1 = GetBook("Book 1");
             SetName(book1, "New Name");
 
-            Assert.Equal(book1.Name, "New Name");
+            Assert.Equal("New Name", book1.Name);
 
         }
 
@@ -58,6 +58,7 @@ namespace GradeBook.Tests
             Assert.NotSame(book1, book2);
 
         }
+        [Fact]
         public void TwoVarsCanReferenceSameObjects()
         {
             var book1 = GetBook("Book 1");
